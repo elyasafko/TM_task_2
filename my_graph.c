@@ -4,15 +4,12 @@
 #include <stdbool.h>
 #include "my_mat.h"
 
-#define SIZE 10
-
 
 int main()
 {
     int i, j;
     char choice;
     int arr[SIZE][SIZE];
-    printf("Enter choice (A, B, C, or D): ");
 
     do{
         scanf(" %c", &choice);
@@ -38,7 +35,7 @@ int main()
             break;
         }
     }
-    while (choice != 'D');
+    while (choice != 'D' && !EOF);
 
 
     return 0;
