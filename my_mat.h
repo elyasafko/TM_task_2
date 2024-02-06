@@ -9,5 +9,6 @@ void insertsGraph(int arr[][SIZE]);
 void floydWarshall(int arr[][SIZE]);
 int thereIsPath(int arr[][SIZE], int i, int j);
 int knapSack (int weights[], int values[], int selected_bool[]);
+int max(int a, int b);
 
 #endif

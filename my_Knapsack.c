@@ -11,7 +11,6 @@ int main()
     int values[ITEMSAMOUNT];
     int weights[ITEMSAMOUNT];
     int selected_bool[ITEMSAMOUNT];
-    char results[ITEMSAMOUNT];
 
     printf("Enter the values of the items: \n");
     for (int i = 0; i < ITEMSAMOUNT; i++)
@@ -25,9 +24,9 @@ int main()
     }
     printf("Maximum profit: %d\n", knapSack(weights, values, selected_bool));
     printf("Items that give the maximum profit: ");
-    for (int i = 0; i < ITEMSAMOUNT; i++)
+    for (int i = ITEMSAMOUNT; i >= 0; i--)
     {
-        if (results[i] == 1)
+        if (selected_bool[i] == 1)
         {
             printf("%c ", items[i]);
         }
