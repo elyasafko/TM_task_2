@@ -11,7 +11,7 @@ clean:
 	@rm -f *.o *.a my_graph my_Knapsack
 
 # Rule to build the executable 'my_graph'
-my_graph: my_graph.o libmy_mat.a
+my_graph : my_graph.o libmy_mat.a
 	$(CC) -Wall -g my_graph.o -o my_graph -L. -lmy_mat -lm
 
 # Rule to build the executable 'my_Knapsack'
