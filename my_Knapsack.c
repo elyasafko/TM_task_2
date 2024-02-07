@@ -24,12 +24,12 @@ int main()
     scanf("%d", &weights[ITEMSAMOUNT-1]);
 
     printf("Maximum profit: %d\n", knapSack(weights, values, selected_bool));
-    printf("Selected items: ");
+    printf("Selected items:");
     for (size_t i = 0; i < ITEMSAMOUNT; i++)
     {
         if (selected_bool[i] == 1)
         {
-            printf("%c ", items[i]);
+            printf(" %c", items[i]);
         }
     }
     printf("\n");
