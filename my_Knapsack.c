@@ -33,6 +33,12 @@ int main()
         }
     }
     printf("\n");
+    
+    free(selected_bool);
+    free(weights);
+    free(values);
+    free(items);
+
     return 0;
 }
 
