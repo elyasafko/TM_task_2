@@ -35,7 +35,7 @@ int main()
             break;
         }
     }
-    while (choice != 'D' && !EOF);
+    while (choice != 'D');
 
 
     return 0;
