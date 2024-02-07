@@ -37,7 +37,5 @@ int main()
     }
     while (choice != 'D');
 
-    free(arr);
-
     return 0;
 }

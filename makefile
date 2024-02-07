@@ -12,24 +12,24 @@ clean:
 
 # Rule to build the executable 'my_graph'
 my_graph: my_graph.o libmy_mat.a
-	$(CC) -Wall -g my_graph.o -o my_graph -L. -lmy_mat -lm
+	$(CC) -Wall -g $^ -o $@ 
+
+# Rule to build the object file 'my_graph.o'
+my_graph.o: my_graph.c my_mat.h
+	$(CC) -Wall -g -c my_graph.c -fPIC
 
 # Rule to build the executable 'my_Knapsack'
 my_Knapsack: my_Knapsack.o libmy_mat.a
-	$(CC) -Wall -g my_Knapsack.o -o my_Knapsack -L. -lmy_mat -lm
+	$(CC) -Wall -g $^ -o $@ 
 
 # Rule to build the executable 'my_Knapsack'
 my_Knapsack.o: my_Knapsack.c
-	$(CC) -Wall -g -c my_Knapsack.c
+	$(CC) -Wall -g -c my_Knapsack.c -fPIC
+
+# Rule to build the object file 'my_mat.o'
+my_mat.o: my_mat.c my_mat.h
+	$(CC) -Wall -g -c my_mat.c -fPIC
 
 # Rule to build the library 'libmy_mat.a'
 libmy_mat.a: my_mat.o
 	ar rcs libmy_mat.a my_mat.o
-
-# Rule to build the object file 'main.o'
-my_graph.o: my_graph.c my_mat.h
-	$(CC) -Wall -g -c my_graph.c
-
-# Rule to build the object file 'my_mat.o'
-my_mat.o: my_mat.c my_mat.h
-	$(CC) -Wall -g -c my_mat.c
