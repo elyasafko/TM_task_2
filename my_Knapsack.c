@@ -32,7 +32,7 @@ int main()
             printf(" %c", items[i]);
         }
     }
-    printf("\n");
+    //printf("\n");
 
     return 0;
 }
