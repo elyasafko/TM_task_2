@@ -4,7 +4,7 @@
 #define MAXWEIGHT 20
 #define ITEMSAMOUNT 5
 
-
+// Function prototypes
 void insertsGraph(int arr[][SIZE]);
 void floydWarshall(int arr[][SIZE]);
 int thereIsPath(int arr[][SIZE], int i, int j);

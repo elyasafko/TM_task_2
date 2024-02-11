@@ -4,16 +4,15 @@
 #include <stdbool.h>
 #include "my_mat.h"
 
-
 int main()
 {
     int i, j;
     char choice;
     int arr[SIZE][SIZE];
 
+    // Read the graph and the operations
     do{
         scanf(" %c", &choice);
-
         switch (choice)
         {
         case 'A':
@@ -35,7 +34,6 @@ int main()
             break;
         }
     }
-    while (choice != 'D');
-
+    while (choice != 'D' || choice != EOF);
     return 0;
 }
